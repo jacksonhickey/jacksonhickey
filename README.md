@@ -30,16 +30,16 @@
 
 
 # Total Project Downloads
-My video game modifications have around 2,552,438 downloads. \
+My video game modifications have around 2,552,653 downloads. \
 \
 Rankings:
-- Recipe Unlocker - 938,568 downloads  
-- Global Datapacks - 638,874 downloads  
-- Shards - 622,165 downloads  
-- Particle Blocker - 160,804 downloads  
-- Rain Growth - 77,205 downloads  
+- Recipe Unlocker - 938,613 downloads  
+- Global Datapacks - 638,969 downloads  
+- Shards - 622,216 downloads  
+- Particle Blocker - 160,820 downloads  
+- Rain Growth - 77,211 downloads  
 - Chat Control - 49,298 downloads  
-- Copyshot - 47,994 downloads  
+- Copyshot - 47,996 downloads  
 - No AutoJump - 13,609 downloads  
 - Frost Boater - 2,547 downloads  
 - Featurosity - 1,374 downloads  
