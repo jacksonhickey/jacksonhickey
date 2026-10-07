@@ -1,11 +1,11 @@
 import requests
-from github import Github
+from github import Github, Auth
 from datetime import datetime
 from os import getenv
 
 saved_projects = []
 download_count = []
-g = Github('s', getenv('ACCESS_TOKEN'))
+g = Github(auth=Auth.Token(getenv('ACCESS_TOKEN')))
 
 
 def get_github_downloads(user):
@@ -30,7 +30,6 @@ def get_github_downloads(user):
             download_count.append(repo_download_count)
         except:
             ''
-    
 
     return counted_downloads
 
@@ -54,8 +53,17 @@ def get_modrinth_downloads(user):
 
 def get_curseforge_downloads(user_id):
     counted_downloads = 0
-    response = requests.get('https://api.curse.tools/v1/cf/mods/search',
-                            params={'gameId': '432', 'authorId': '{}'.format(user_id)}).json()
+    response = requests.get('https://api.curse.tools/v1/cf/mods/search', params={'gameId': '432', 'authorId': '{}'.format(user_id)}, timeout=30)
+
+    print('CurseForge status:', response.status_code)
+    print('CurseForge content type:', response.headers.get('Content-Type'))
+
+    response.raise_for_status()
+
+    try:
+        response = response.json()
+    except requests.exceptions.JSONDecodeError:
+        raise RuntimeError('CurseForge returned invalid JSON: {}'.format(response.text[:500]))
 
     for project in response.get('data'):
 
@@ -80,7 +88,7 @@ def get_github_projects_string(projects, user):
     for project in projects:
         if project[2] >= 1:
             project_string += '- [{}](https://github.com/{}/{}) - {}\n'.format(project[0].replace('-', ' '), user,
-                                                                               project[0], project[1])
+                                                                             project[0], project[1])
     return project_string
 
 
