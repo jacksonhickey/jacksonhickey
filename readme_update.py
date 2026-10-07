@@ -1,4 +1,5 @@
 import requests
+from curl_cffi import requests as browser_requests
 from github import Github, Auth
 from datetime import datetime
 from os import getenv
@@ -53,17 +54,16 @@ def get_modrinth_downloads(user):
 
 def get_curseforge_downloads(user_id):
     counted_downloads = 0
-    response = requests.get('https://api.curse.tools/v1/cf/mods/search', params={'gameId': '432', 'authorId': '{}'.format(user_id)}, timeout=30)
+    response = browser_requests.get('https://api.curse.tools/v1/cf/mods/search', params={'gameId': '432', 'authorId': '{}'.format(user_id)}, impersonate='chrome', timeout=30)
 
     print('CurseForge status:', response.status_code)
     print('CurseForge content type:', response.headers.get('Content-Type'))
 
-    response.raise_for_status()
+    if response.status_code != 200:
+        print(response.text[:2000])
 
-    try:
-        response = response.json()
-    except requests.exceptions.JSONDecodeError:
-        raise RuntimeError('CurseForge returned invalid JSON: {}'.format(response.text[:500]))
+    response.raise_for_status()
+    response = response.json()
 
     for project in response.get('data'):
 
