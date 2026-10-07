@@ -1,3 +1,4 @@
 requests
 pygithub
 datetime
+curl_cffi
