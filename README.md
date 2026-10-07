@@ -5,6 +5,7 @@
 - Profile Visits: <img src="https://c.andyhoppe.com/1649759421" style="border:none" alt="Counter"/>
 # Projects
 - [Chat Control](https://github.com/jacksonhickey/Chat-Control) - Take back control of your server chat with filters and mutes.
+- [Chinese101 Tricards](https://github.com/jacksonhickey/Chinese101-Tricards) - 3-sided notecards for UChicago Chinese 101.
 - [Copyshot](https://github.com/jacksonhickey/Copyshot) - Copies screenshots to your clipboard when you take them in Minecraft.
 - [days of python](https://github.com/jacksonhickey/days-of-python) - A collection of things I wrote to keep my knowledge sharp (:
 - [declipsonator.github.io](https://github.com/jacksonhickey/declipsonator.github.io) - A professional website for a professional fellow
@@ -30,18 +31,18 @@
 
 
 # Total Project Downloads
-My video game modifications have around 2,573,137 downloads. \
+My video game modifications have around 2,579,863 downloads. \
 \
 Rankings:
-- Recipe Unlocker - 942,434 downloads  
-- Global Datapacks - 647,178 downloads  
-- Shards - 627,855 downloads  
-- Particle Blocker - 161,972 downloads  
-- Rain Growth - 78,247 downloads  
-- Chat Control - 49,498 downloads  
-- Copyshot - 48,200 downloads  
-- No AutoJump - 13,787 downloads  
-- Frost Boater - 2,572 downloads  
+- Recipe Unlocker - 943,784 downloads  
+- Global Datapacks - 649,606 downloads  
+- Shards - 629,766 downloads  
+- Particle Blocker - 162,423 downloads  
+- Rain Growth - 78,616 downloads  
+- Chat Control - 49,586 downloads  
+- Copyshot - 48,260 downloads  
+- No AutoJump - 13,854 downloads  
+- Frost Boater - 2,574 downloads  
 - Featurosity - 1,394 downloads  
 
 
